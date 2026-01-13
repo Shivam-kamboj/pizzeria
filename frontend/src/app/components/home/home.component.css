@@ -1,0 +1,49 @@
+img{
+    height:300px;
+    width: 300px;
+}
+h2{
+    text-align: center;
+    margin:0px 0px 20px 0px;
+}
+p{
+    text-align: justify;
+}
+.ingredients{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+}
+.ileft{
+padding: 50px;
+
+}
+.iright h3{
+    padding:0px 0px 20px 0px;
+
+}
+.chef{
+
+    display:flex;
+    justify-content: space-around;
+    
+}
+.lchef{
+    padding: 50px;
+}
+.lchef h3{
+padding:0px 0px 20px 0px;
+    
+}
+
+.timer{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.wrapper{
+    padding: 10px 100px;
+    /* background-color: rgb(245, 243, 243); */
+}

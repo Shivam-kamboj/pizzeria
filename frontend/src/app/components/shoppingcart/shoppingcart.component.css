@@ -1,0 +1,210 @@
+img {
+    width: 50px;
+    height: 50px;
+}
+
+tr {
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+.pizzacart {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    width: 50%;
+
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.3);
+
+
+
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+ 
+    gap: 40px;
+
+}
+.main{
+     height: 100vh;
+}
+
+td {
+    padding: 5px;
+
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.minibtn {
+    border: none;
+    background-color: rgb(235, 117, 7);
+    color: white;
+    text-align: center;
+    width: 20px;
+    padding: 5px;
+    /* height: 30px; */
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+.deletebtn {
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+
+
+
+.veg-icon {
+    width: 22px;
+    height: 22px;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -bottom: 18px;
+}
+
+.veg-icon span {
+    width: 12px;
+    height: 12px;
+    background: green;
+    border-radius: 50%;
+}
+
+.nonveg-icon {
+    width: 22px;
+    height: 22px;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nonveg-icon span {
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
+}
+
+table {
+    width: 100%
+}
+
+.item-info {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.item-price {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.subtotal td p {
+    padding-top: 15px;
+    padding-left: 50px;
+
+}
+
+/* Ingredient Section */
+.ingredient-section {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pizza-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredientcart {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    width: 100%;
+
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.3);
+    padding: 5px 20px;
+
+
+
+
+}
+
+.ilist-items {
+    display: flex;
+    justify-content: space-between;
+
+    ;
+
+}
+
+#arrowimg {
+    width: 15px;
+    height: 15px;
+}
+
+.clicked {
+    transform: rotate(180deg);
+}
+
+.unclicked {
+    transform: rotate(0deg);
+}
+
+.right {
+    width: 20%;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.5);
+    width: 60px;
+}
+
+.pay {
+    background-color: rgb(255, 174, 0);
+    color: white;
+}
+
+.clear {
+    background-color: grey;
+    color: white;
+}

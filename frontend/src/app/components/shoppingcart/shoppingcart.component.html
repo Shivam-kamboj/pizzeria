@@ -1,0 +1,84 @@
+<div class="main">
+
+    <div class="wrapper">
+        <div class="pizzacart">
+            <h2 class="text-center">My cart</h2>
+            <hr>
+            <h3 *ngIf="cs.cart.length===0">Cart is Empty</h3>
+            <table *ngIf="cs.cart.length>0">
+                <tbody>
+                    <tr *ngFor="let item of cs.cart">
+                        <td><img [src]="item.image" alt="pizza image"></td>
+                        <td>
+                            <div class="item-info">
+                                <div class="item-name">{{item.name}}</div>
+                                <div class="item-price"> {{item.price|currency:"INR"}}</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="veg-icon" *ngIf="item.type === 'veg'">
+                                <span></span>
+                            </div>
+
+                            <div class="nonveg-icon" *ngIf="item.type === 'nonveg'">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div>{{item.price*item.quantity|currency:'INR'}}</div>
+                        </td>
+                        <td><button class="minibtn" (click)="increment(item)">+</button>{{item.quantity}} <button
+                                class="minibtn" (click)="decrement(item)">-</button> </td>
+                        <td><button class="deletebtn" (click)="delete(item)">Delete</button></td>
+                    </tr>
+                    <tr class="subtotal">
+                        <td colspan="5">
+                            <p><b>SubTotal:{{totalpizzacost|currency:"INR"}}</b></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right">
+
+            <div class="ingredientcart">
+                <div class="one">
+                    <h3 class="text-center">The amount of</h3>
+                    <hr>
+                </div>
+                <div class="two">
+                    <div class="pizza-section">
+                        <div class="pizza">Pizza</div>
+                        <div class="subtotal">{{totalpizzacost|currency:'INR'}}</div>
+                    </div>
+                    <div class="ingredient-section">
+                        <div class="ingredients">
+                            <label for="Iselect">Ingredients</label>
+                            <img id="arrowimg" src="/assets/downarrow.png" alt="" (click)="toggle()"
+                                [ngClass]="istrue?'clicked':'unclicked'">
+                        </div>
+
+                        <div class="ingredient-prize">{{totalingredientcost|currency:'INR'}}</div>
+                    </div>
+                    <div class="ilist" *ngIf="istrue &&cs.icart.length>0">
+                        <div *ngFor="let i of cs.icart" class="ilist-items">
+                            <span>{{i.tname}}</span>
+                            <span>{{i.price|currency:"INR"}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="three">
+                    <hr>
+                    <div class="text-end"><b>Total:{{totalpizzacost+totalingredientcost|currency:'INR'}}</b></div>
+                </div>
+
+
+            </div>
+            <div class="button-section">
+                <button class="pay" (click)="pay()">Pay</button>
+                <button class="clear" (click)="clear()">Clear</button>
+
+            </div>
+        </div>
+    </div>
+</div>

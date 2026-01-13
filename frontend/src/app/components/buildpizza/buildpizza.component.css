@@ -1,0 +1,29 @@
+
+table{
+    margin: auto;
+    width: 60%;
+}
+tr{
+    height:100px;
+}
+
+.wrapper{
+    padding: 0px 200px;
+}
+img{
+    height: 100px;
+}
+button{
+    text-align: center;
+    background-color:rgb(232, 166, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin:10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.button-row td{
+    border: none;
+}

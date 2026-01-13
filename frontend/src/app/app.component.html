@@ -1,0 +1,29 @@
+<nav >
+  <div class="container1">
+    <div class="logo">
+      <h2>Pizzeria</h2>
+      <div class="pizzaLogo">
+        <a routerLink="/"><img
+            src="https://c8.alamy.com/comp/2G4TT1E/pizza-logo-emblem-for-fast-food-restaurant-pizzeria-cafe-vector-illustration-2G4TT1E.jpg"
+            width="100px" alt=""></a>
+      </div>
+    </div>
+    <div class="left">
+      <a routerLink="/orderPizza" routerLinkActive="selectedroute">Order Pizza</a>
+      <a routerLink="/buildPizza" routerLinkActive="selectedroute">Build ur Pizza</a>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="cart">
+      <button routerLink="/shoppingCart"><img src="/assets/cart.png" alt="cart image" width="20px"><span *ngIf="this.cs.cart.length>0">{{this.cs.cart.length}}</span> Shopping Cart</button>
+    </div>
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>
+<footer>
+  <p>copyright &copy; 2017. All rights reserved</p>
+</footer>

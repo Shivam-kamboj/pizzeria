@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div class="my-card" *ngFor="let pizza of pizzadata">
+        <div class="one">
+            <div>{{pizza.name}}</div>
+            <div class="veg-icon" *ngIf="pizza.type === 'veg'">
+                <span></span>
+            </div>
+
+            <div class="nonveg-icon" *ngIf="pizza.type === 'nonveg'">
+                <span></span>
+            </div>
+            <div> {{pizza.price | currency:'INR'}}</div>
+        </div>
+        <div class="two">
+            <div class="desc">
+                <p>{{pizza.description}}</p>
+            </div>
+            <div class="ingredients">
+                <b>Ingredients:</b>
+                <span *ngFor="let i of pizza.ingredients;let islast=last">
+                    {{i.iname}} <span *ngIf="!islast">,</span>
+
+                </span>
+            </div>
+            <div class="topping">
+                <b>Toppings:</b>
+                <span *ngFor="let i of pizza.topping;let islast=last">
+                    {{i.tname}} <span *ngIf="!islast">,</span>
+
+                </span>
+            </div>
+        </div>
+        <div class="three">
+            <div class="img">
+                <img src={{pizza.image}} alt="pizza image">
+            </div>
+            <div class="button">
+                <button (click)="toggle(pizza)"[ngClass]="pizza.isAdded ? 'remove-btn' : 'add-btn'">{{pizza.isAdded?'Remove':'Add to cart'}}</button>
+            </div>
+        </div>
+    </div>
+</div>
